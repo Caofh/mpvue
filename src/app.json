@@ -3,6 +3,14 @@
     "pages/demo/main",
     "pages/logs/main"
   ],
+  "subpackages": [
+    {
+      "root": "pages/c2c/pages/",
+      "pages": [
+        "home/main"
+      ]
+    }
+  ],
   "window": {
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#fff",

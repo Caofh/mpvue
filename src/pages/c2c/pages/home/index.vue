@@ -1,11 +1,7 @@
 <template>
   <div>
     <div @click="click">
-      牛逼啦
-    </div>
-
-    <div @click="jump">
-      跳转分包的示例页面
+      我是分包后的页面
     </div>
 
     <div class="content">
@@ -26,8 +22,8 @@ export default {
   data () {
     return {
       motto: 'Hello miniprograme',
-      img: require('../../assets/img/root_demo_demo.jpeg'),
-      invite: require('../../assets/img/root_demo_invite.png'),
+      img: require('../../../../assets/img/root_demo_demo.jpeg'),
+      invite: require('../../../../assets/img/root_demo_invite.png'),
 
     }
   },
@@ -49,11 +45,7 @@ export default {
                   }
               }
           })
-      },
-      jump () {
-          wx.navigateTo({
-              url: '/pages/c2c/pages/home/main'
-          })
+
 
 
       }
@@ -76,7 +68,7 @@ export default {
   }
 
   .bg {
-    background: url("../../assets/img/root_demo_demo.jpeg") no-repeat center / 100% 100%;
+    background: url("../../../../assets/img/root_demo_demo.jpeg") no-repeat center / 100% 100%;
     width: 200rpx;
     height: 200rpx;
   }
