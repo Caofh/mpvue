@@ -27,8 +27,8 @@ npm run build
 ##示例详解
 ###1.兼容原生小程序迁移：
 ###。配置src中的app.json，将原生文件夹作为分包
-###。将原生开发文件夹复制到根目录（如mpvue/c2cNative）
-###。在npm run build构建之后执行npm run copy（将c2cNative文件夹直接copy到dist/wx中）
+###。将原生开发文件夹复制到根目录（如mpvue/native）
+###。在npm run build构建之后执行npm run copy（将native文件夹直接copy到dist/wx中）
 
 ###2.mpvue内部分包
 ###。配置src中的app.json

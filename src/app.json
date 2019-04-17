@@ -11,7 +11,7 @@
       ]
     },
     {
-      "root": "c2cNative/pages",
+      "root": "native/pages",
       "pages": [
         "home/home"
       ]

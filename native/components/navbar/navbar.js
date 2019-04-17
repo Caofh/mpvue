@@ -10,7 +10,7 @@ Component({
   properties: {
     title: {
       type: String,
-      value: '寺库商城'
+      value: ''
     },
     bgMark: {
       type: Boolean,
