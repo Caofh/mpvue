@@ -9,6 +9,12 @@
       "pages": [
         "home/main"
       ]
+    },
+    {
+      "root": "c2cNative/pages",
+      "pages": [
+        "home/home"
+      ]
     }
   ],
   "window": {

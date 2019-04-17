@@ -1,0 +1,98 @@
+
+<view class="container">
+    <navbar datas="{{navbarData}}" title="{{setNavigationBarTitle}}"
+        spaceMark="{{true}}"
+        bgMark="{{headerBg}}" navigationBarHeight="{{navigationBarHeight}}"></navbar>
+
+    <scroll-view class="list"
+        style="height: {{scrollViewH}}px;"
+        scroll-y="true"
+        scroll-top="{{scrollTop}}"
+        upper-threshold="50"
+        lower-threshold="100"
+        bindscrolltolower="scrolltolower"
+        bindscroll="listenScroll"
+        >
+
+        <view class="banner c2c-flex-x-center">
+            <view class="banner-detail c2c-img">
+                <image src="../../assets/img/demo.jpeg"></image>
+            </view>
+        </view>
+
+        <view class="list-content c2c-flex-x-start">
+
+            <view class="list-item c2c-flex-y-start {{index % 2 == 1 ? 'noMargin' : ''}}"
+                wx:for="{{listData}}" wx:key="{{index}}"
+                style="left:{{item.left}}px;top:{{item.top}}px"
+                bindtap="jumpDetail"
+                >
+
+                <view class="ware-img"
+                    style="height:{{item.height}}px;background-image:url({{item.commodityImage}});">
+
+                </view>
+
+                <view class="ware-money-part c2c-flex-y-center">
+                    <view class="ware-name c2c-ellipsis-more">路易威登 女士 棕色棋盘、斜挎包 Damier Azur 帆棕色棋盘、斜挎包 Damier Azur 帆棕色棋盘、斜挎包 Damier Azur 帆</view>
+                    <view class="money-group c2c-flex-x-start">
+                        <view wx:if="{{item.salePrice !== 0}}" class="sale-money c2c-flex-x-start">
+                            <view class="unit">￥</view>
+                            <view class="money-num">{{item.salePrice_new || '-'}}</view>
+                        </view>
+
+                        <view wx:if="{{item.originalPrice !== 0}}" class="origin-price c2c-flex-x-start">
+                            <view class="symbol">¥</view>
+                            <view>{{item.originalPrice_new}}</view>
+
+                            <view class="line"></view>
+                        </view>
+                    </view>
+                </view>
+
+                <view class="seller-info c2c-flex-x-start">
+                    <view class="seller-avator c2c-img">
+                        <image src="{{item.userHeadImg || ''}}"></image>
+                    </view>
+                    <view class="seller-name">{{item.userName || '-'}}</view>
+                    <view class="seller-place">{{item.oneAddressName || '-'}}</view>
+                </view>
+
+            </view>
+
+           <!--loading动态图-->
+            <view wx:if="{{loadingTopResult}}" class="loading" style="top:{{loadingTopResult}}px;">
+                加载中...
+            </view>
+
+        </view>
+
+    </scroll-view>
+
+    <!--底部吸底按钮-->
+    <view class="btn-group c2c-flex-x-center">
+        <view class="btn-body c2c-flex-x-center">
+            <view bindtap="sell" class="sell">我要出售</view>
+            <view class="line"></view>
+            <view class="manage">管理商品</view>
+        </view>
+    </view>
+
+    <!--急速发布部分-->
+    <view bindtap="closeDialog" wx:if="{{publishShow}}" class="publish">
+        <view class="pub-body c2c-flex-y-center">
+            <view catchtap="quickPub" class="btn quick-pub c2c-flex-y-center">
+                <view class="title">急速发布</view>
+                <view class="sub-title">像发朋友圈一样轻松发布商品</view>
+            </view>
+            <view catchtap="resell" class="btn resell c2c-flex-y-center">
+                <view class="title">一键转卖</view>
+                <view class="sub-title">一键转卖寺库订单商品</view>
+            </view>
+        </view>
+
+    </view>
+
+</view>
+
+

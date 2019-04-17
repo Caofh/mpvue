@@ -4,8 +4,17 @@
       牛逼啦
     </div>
 
+    <view>
+
+      123
+    </view>
+
+    <div>
+      <span>12345</span>
+    </div>
+
     <div @click="jump">
-      跳转分包的示例页面
+      跳转分包的示例页面{{}}
     </div>
 
     <div class="content">
@@ -56,7 +65,8 @@ export default {
           })
 
 
-      }
+      },
+
 
   },
 

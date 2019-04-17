@@ -1,0 +1,20 @@
+<view class="navbar {{bgMark ? 'white' : ''}}" style="{{'height: ' + navigationBarHeight}}px">
+  <view style="{{'height: ' + statusBarHeight}}"></view>
+  <view class='title-container'>
+    <view class='capsule'>
+      <template is="barTemplate" data="{{list}}" />
+    </view>
+    <view class="title {{bgMark ? 'white' : ''}}">{{title}}</view>
+  </view>
+
+</view>
+
+<view wx:if="{{spaceMark}}" class="space" style="height:{{navigationBarHeight}}px"></view>
+<!-- tabbar template -->
+<template name="barTemplate">
+  <block wx:for="{{list}}" wx:key="{{index}}">
+    <view class='img_wrapper' catchtap='onClick' data-model="{{item}}">
+      <image src='{{item.icon}}' class='img_home'></image>
+    </view>
+  </block>
+</template>

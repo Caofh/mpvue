@@ -1,0 +1,242 @@
+
+/*
+全站样式规则：
+字体颜色规则：#333(标题),#666（标题下内容及正文）,#999(辅助内容)
+
+*/
+
+/*
+页面统一风格common系列（持续更新）：
+1.统一风格: 按钮(100rpx,30rpx)
+2.统一风格: 文本框(宽度为100rpx和宽度为200rpx的两种文本框)
+3.统一风格: select(宽度为100rpx和宽度为200rpx的两种select)
+4.统一风格: position三种位置、浮动、清除浮动
+5.统一风格: 省略号系列（单行省略号和多行省略号）,注：多行省略号目前只支持chrome浏览器，存在兼容性问题
+6.统一风格: <a>标签样式
+7.统一风格: flex布局相关
+8.统一风格: 隐藏元素（c2c-hidden）
+9.统一风格: <div>四个方向边框，自由搭配（c2c-border-r、c2c-border-l、c2c-border-t、c2c-border-b）
+10.统一风格: 颜色系列(c2c-red、c2c-f71等)
+
+*/
+
+/*统一风格：颜色系列*/
+.c2c-f71{
+  color:#f71;
+}
+.c2c-e79{
+  color:#E79599;
+}
+.c2c-444{
+  color:#444;
+}
+.c2c-red{
+  color:#e66161;
+}
+.c2c-blue{
+  color:#265D9C;
+}
+.c2c-999{
+  color:#999;
+}
+.c2c-666{
+  color:#666;
+}
+/*---*/
+
+/*统一风格: 按钮(100rpx,30rpx)*/
+.c2c-btn{
+  display: block;
+  width: 140rpx;
+  height: 50rpx;
+  line-height: 50rpx;
+  text-align: center;
+  font-size: 14px;
+  color: #fff;
+  background: #f71;
+  border-radius: 6rpx;
+  cursor:pointer;
+  text-decoration: none;
+}
+.c2c-btn:hover{
+  text-decoration:none;
+  color:#fff;
+}
+
+/*统一风格: 文本框(宽度为100rpx和宽度为200rpx的两种文本框)*/
+.c2c-input{
+  width:100rpx;
+  height:30rpx;
+  line-height:30rpx;
+  font-size:12rpx;
+  border: 1rpx solid #cccccc;
+  padding: 0 5rpx;
+  color:#666;
+}
+.c2c-input-w200{
+  width:200rpx;
+  height:30rpx;
+  line-height:30rpx;
+  font-size:12rpx;
+  border: 1rpx solid #cccccc;
+  padding: 0 5rpx;
+  color:#666;
+}
+.c2c-input:active, .c2c-input:focus,
+.c2c-input-w200:active, .c2c-input-w200:focus{
+  outline: none;
+}
+
+/*统一风格: select(宽度为100rpx和宽度为200rpx的两种select)*/
+.c2c-select{
+  width:100rpx;
+  height:30rpx;
+  line-height:30rpx;
+  border: 1rpx solid #ccc; /* 兼容firefox*/
+  box-shadow: 0 0 0 0 #fff; /* 兼容chrome*/
+  background: #fff;
+  color:#666;
+}
+.c2c-select-w200{
+  width:200rpx;
+  height:30rpx;
+  line-height:30rpx;
+  border: 1rpx solid #ccc; /* 兼容firefox*/
+  box-shadow: 0 0 0 0 #fff; /* 兼容chrome*/
+  background: #fff;
+  color:#666;
+}
+.c2c-select:active, .c2c-select:focus,
+.c2c-select-w200:active, .c2c-select-w200:focus{
+  outline: none;
+}
+
+/*统一风格: position三种位置、浮动、清除浮动*/
+.c2c-relative{
+  position:relative;
+}
+.c2c-absolute{
+  position:absolute;
+}
+.c2c-fixed{
+  position:fixed;
+}
+.c2c-float-l{
+  float:left;
+}
+.c2c-float-r{
+  float:right;
+}
+.c2c-clear-new {
+  overflow:hidden;
+  _zoom:1;
+}
+.c2c-clear{
+  clear:both;
+}
+
+/*统一风格: 省略号系列（单行省略号和多行省略号）,注：多行省略号目前只支持chrome浏览器，存在兼容性问题*/
+.c2c-ellipsis-single{
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.c2c-ellipsis-more{ /* 默认两行省略,如多行自行修改下方-webkit-line-clamp值：改为想要省略的行数*/
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+
+/*统一风格：<a>标签*/
+.c2c-a{
+  color:#265D9C;
+  text-decoration:none;
+  cursor:pointer;
+}
+.c2c-a:hover{
+  text-decoration:underline;
+}
+
+/*统一风格flex布局*/
+.c2c-flex-x-between{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.c2c-flex-x-center{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.c2c-flex-x-start{
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.c2c-flex-x-end{
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+.c2c-flex-y-between{
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  align-items: center;
+}
+.c2c-flex-y-center{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+.c2c-flex-y-start{
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  align-items: center;
+}
+.c2c-flex-y-end{
+  display: flex;
+  justify-content: flex-end;
+  flex-direction: column;
+  align-items: center;
+}
+
+/*统一风格隐藏元素*/
+.c2c-hidden{
+  display:none;
+}
+
+/*统一风格自定义div单个方向边框*/
+.c2c-border-t{
+  border-top:1rpx solid #f0f0f0;
+}
+.c2c-border-b{
+  border-bottom:1rpx solid #f0f0f0;
+}
+.c2c-border-l{
+  border-left:1rpx solid #f0f0f0;
+}
+.c2c-border-r{
+  border-right:1rpx solid #f0f0f0;
+}
+
+/*图片容器*/
+.c2c-img {
+    position: relative;
+}
+.c2c-img > image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+/*点击按钮透明度降半*/
+.c2c-active:active {
+  opacity: 0.5;
+}

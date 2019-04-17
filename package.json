@@ -21,7 +21,8 @@
     "dev": "node build/dev-server.js local wx",
     "test": "node build/dev-server.js test wx",
     "start": "npm run dev",
-    "build": "node build/build.js wx"
+    "build": "node build/build.js wx",
+    "copy": "cp -rf c2cNative ./dist/wx"
   },
   "dependencies": {
     "mpvue": "^2.0.0",
