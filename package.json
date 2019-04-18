@@ -22,7 +22,7 @@
     "test": "node build/dev-server.js test wx",
     "start": "npm run dev",
     "build": "node build/build.js wx",
-    "copy": "cp -rf c2cNative ./dist/wx"
+    "copy": "cp -rf native ./dist/wx"
   },
   "dependencies": {
     "mpvue": "^2.0.0",

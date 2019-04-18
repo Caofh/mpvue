@@ -77,7 +77,7 @@ let baseWebpackConfig = {
         options: {
           // limit: 10000,
           limit: process.env.CURENV !== 'local' ? 1 : 999999999, // c2c定制化配置
-          name: utils.assetsPath('img/[name].[ext]')
+          name: utils.assetsPath('img/[name].[hash:7].[ext]')
         }
       },
       {

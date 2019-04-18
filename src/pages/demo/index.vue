@@ -35,8 +35,8 @@ export default {
   data () {
     return {
       motto: 'Hello miniprograme',
-      img: require('../../assets/img/root_demo_demo.jpeg'),
-      invite: require('../../assets/img/root_demo_invite.png'),
+      img: require('../../assets/img/demo/root_demo_demo.jpeg'),
+      invite: require('../../assets/img/demo/root_demo_invite.png'),
 
     }
   },
@@ -86,7 +86,7 @@ export default {
   }
 
   .bg {
-    background: url("../../assets/img/root_demo_demo.jpeg") no-repeat center / 100% 100%;
+    background: url("../../assets/img/demo/root_demo_demo.jpeg") no-repeat center / 100% 100%;
     width: 200rpx;
     height: 200rpx;
   }
