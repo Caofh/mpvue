@@ -1,7 +1,0 @@
-{
-  "navigationBarTitleText": "好物详情",
-  "disableScroll":true,
-  "usingComponents": {
-    "navbar": "../../components/navbar/navbar"
-  }
-}
